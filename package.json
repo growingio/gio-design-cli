@@ -1,0 +1,15 @@
+{
+  "name": "@gio-design/cli",
+  "version": "1.0.0",
+  "description": "GrowingIO Design command line tools",
+  "main": "index.js",
+  "repository": "https://github.com/growingio/gio-design-cli.git",
+  "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
+  "license": "Apache-2.0",
+  "bin": {
+    "gio-design": "./bin/cli.js"
+  },
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
