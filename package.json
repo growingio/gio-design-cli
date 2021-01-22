@@ -9,12 +9,19 @@
   "bin": {
     "gio-design": "./bin/cli.js"
   },
+  "scripts": {
+    "preversion": "git fetch --tags",
+    "postversion": "yarn gen-version && yarn gen-changelog",
+    "gen-version": "conventional-changelog -p angular > VERSION.md",
+    "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
   "dependencies": {
     "yargs": "^16.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -29,13 +36,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
   }
 }
