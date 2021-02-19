@@ -1,6 +1,6 @@
 {
   "name": "@gio-design/cli",
-  "version": "1.0.0",
+  "version": "21.2.0",
   "description": "GrowingIO Design command line tools",
   "main": "index.js",
   "files": [
